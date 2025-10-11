@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #4b0082, #6a0dad, #ff6ec7);
+  background-size: 200% 200%;
+  animation: gradientShift 8s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+#main {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 30px;
+  width: 380px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+#Header {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+#topSection {
+  display: flex;
+  gap: 10px;
+}
+
+#cityInput {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+#cityInput::placeholder {
+  color: #ddd;
+}
+
+#cityInput:focus {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+#getWeatherButton {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #ff6ec7, #a700ff);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#getWeatherButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(255, 110, 199, 0.6);
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 1.1rem;
+  padding: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.cityName {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+.temprature {
+  font-size: 1.2rem;
+  color: #ffe082;
+}
+
+.description {
+  text-transform: capitalize;
+  color: #b3e5fc;
+}
+
+.errorMessage {
+  color: #ff8a80;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 6px;
+}
