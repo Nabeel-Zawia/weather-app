@@ -24,7 +24,8 @@ Steps:
 4- Open the file assets/script.js
 5- Find this line:
 ```js
-  const API_KEY = "YOUR_API_KEY_HERE"; 
+  const API_KEY = "YOUR_API_KEY_HERE";
+```
 
 6-Replace it with your own key
 
